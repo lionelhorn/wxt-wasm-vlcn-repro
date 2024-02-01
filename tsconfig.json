@@ -1,0 +1,20 @@
+{
+  "extends": "./tsconfig.wxt.json",
+  "exclude": [
+    "node_modules"
+  ],
+  "include": [
+    "./**/*.ts",
+    "./**/*.tsx"
+  ],
+  "compilerOptions": {
+    "jsx": "preserve",
+    "isolatedModules": true,
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ],
+    "strictNullChecks": true
+  }
+}
