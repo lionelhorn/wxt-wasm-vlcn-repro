@@ -1,5 +1,4 @@
 import initWasm from "@vlcn.io/crsqlite-wasm";
-import wasmUrl from "@vlcn.io/crsqlite-wasm/crsqlite.wasm?url";
 
 export default defineBackground({
   main() {
@@ -8,7 +7,7 @@ export default defineBackground({
 });
 
 async function initSqlite() {
-  const sqlite = await initWasm(() => wasmUrl);
+  const sqlite = await initWasm();
 
   const db = await sqlite.open("database.db");
   await db.exec(
