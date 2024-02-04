@@ -1,6 +1,5 @@
 .plasmo
 build
 .wxt
-.output
 node_modules
 .idea

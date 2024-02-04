@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "wxt-wasm-vlcn-repro",
+  "version": "0.0.1",
+  "host_permissions": [
+    "https://*/*",
+    "file://*/*"
+  ],
+  "permissions": [
+    "scripting",
+    "tabs",
+    "declarativeNetRequest",
+    "declarativeNetRequestFeedback",
+    "browsingData",
+    "webNavigation"
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self' 'wasm-unsafe-eval'; worker-src 'self' 'wasm-unsafe-eval';"
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
