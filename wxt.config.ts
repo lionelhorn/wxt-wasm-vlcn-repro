@@ -29,9 +29,6 @@ export default defineConfig({
   vite: () => ({
     plugins: [
       react(),
-    ],
-    define: {
-      document: {},
-    },
+    ]
   })
 });

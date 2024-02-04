@@ -1,7 +1,25 @@
-// https://github.com/vlcn-io/js/blob/b1574592f87067c8d6ddc269d9ad26018cfde05b/packages/crsqlite-wasm/src/index.ts#L50
 import initWasm from "@vlcn.io/crsqlite-wasm";
+import wasmUrl from "@vlcn.io/crsqlite-wasm/crsqlite.wasm?url";
 
-export default defineBackground(() => {
-  const db = initWasm();
+export default defineBackground({
+  main() {
+    initSqlite();
+  },
 });
 
+async function initSqlite() {
+  const sqlite = await initWasm(() => wasmUrl);
+
+  const db = await sqlite.open("database.db");
+  await db.exec(
+    "CREATE TABLE IF NOT EXISTS users (id INTEGER PRIMARY KEY NOT NULL, name TEXT)"
+  );
+
+  const stmt = await db.prepare(
+    "INSERT OR IGNORE INTO users (name) VALUES (?)"
+  );
+  await stmt.run(db, `John Do. Born at ${new Date().toTimeString()}`);
+
+  const users = await db.execA<[bigint, string]>("SELECT * FROM users");
+  console.log("Saved users", users);
+}

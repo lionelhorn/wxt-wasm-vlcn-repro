@@ -5,11 +5,12 @@
     "@vlcn.io/crsqlite-wasm": "^0.16.0"
   },
   "devDependencies": {
-    "wxt": "0.15.4",
+    "wxt": "0.16.2",
     "@vitejs/plugin-react": "^4.2.1",
     "vite": "^5.0.12"
   },
   "scripts": {
-    "dev": "wxt"
+    "dev": "wxt",
+    "build": "wxt build"
   }
 }

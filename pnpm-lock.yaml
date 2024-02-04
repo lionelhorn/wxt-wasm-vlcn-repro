@@ -17,8 +17,8 @@ devDependencies:
     specifier: ^5.0.12
     version: 5.0.12
   wxt:
-    specifier: 0.15.4
-    version: 0.15.4
+    specifier: 0.16.2
+    version: 0.16.2
 
 packages:
 
@@ -2759,8 +2759,8 @@ packages:
     resolution: {integrity: sha512-vtK/94akxsTMhe0/cbfpR+syPuszcuwhqVjJq26CuNDgFGj682oRBXOP5MJpv2r7JtE8MsiepGIqvvOTBwn2vA==}
     dev: true
 
-  /publish-browser-extension@2.1.0:
-    resolution: {integrity: sha512-OdnhaGTZ5d3PPNh8gUjTvLhrjH4H0lawe+y5gUvGHAt3hVS33FBTt0r/NyP5qgNtN9TM3iHfTduN4GydXiXt8w==}
+  /publish-browser-extension@2.1.1:
+    resolution: {integrity: sha512-WqCnhHXbmiYn4vIbgcyKWVHiOvCoPjjpt3X+hfnU8rlOozU43TURpHUWZlQ0W49LhvJvBRsBfGRQxtRMGhqsxw==}
     engines: {node: '18', pnpm: '8'}
     hasBin: true
     dependencies:
@@ -3593,8 +3593,8 @@ packages:
         optional: true
     dev: true
 
-  /wxt@0.15.4:
-    resolution: {integrity: sha512-6M7igLCQpoV3dzxROhRPN3AvwN6dFNzUkxflS/a6rtWtxD4q6WS01mvbvWoYZn45BS1sb8gL4qehsTf4DtrG/g==}
+  /wxt@0.16.2:
+    resolution: {integrity: sha512-wf1OFroK6nUiR+h8xbPNTmbqDPIs7TpRkKCjF5Y2de/LRc2nYslRMHx+HsIja+K9pD7J0eSFxoTDC5P623wu5Q==}
     engines: {node: '>=18', pnpm: '>=8'}
     hasBin: true
     dependencies:
@@ -3627,7 +3627,7 @@ packages:
       ora: 7.0.1
       picocolors: 1.0.0
       prompts: 2.4.2
-      publish-browser-extension: 2.1.0
+      publish-browser-extension: 2.1.1
       rollup-plugin-visualizer: 5.12.0
       unimport: 3.7.1
       vite: 5.0.12
