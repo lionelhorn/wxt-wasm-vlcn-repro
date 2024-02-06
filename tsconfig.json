@@ -10,11 +10,6 @@
   "compilerOptions": {
     "jsx": "preserve",
     "isolatedModules": true,
-    "plugins": [
-      {
-        "name": "next"
-      }
-    ],
     "strictNullChecks": true
   }
 }
