@@ -1,0 +1,14 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "allowJs": false,
+    "esModuleInterop": false,
+    "allowSyntheticDefaultImports": true,
+  },
+  "files": [],
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ]
+}

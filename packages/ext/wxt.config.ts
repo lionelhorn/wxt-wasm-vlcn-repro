@@ -1,6 +1,7 @@
 import { defineConfig } from "wxt";
 import react from "@vitejs/plugin-react";
 import { copyFile } from "node:fs/promises";
+import tsconfigPaths from "vite-tsconfig-paths";
 
 // See https://wxt.dev/api/config.html
 export default defineConfig({
@@ -9,13 +10,6 @@ export default defineConfig({
   entrypointsDir: "entrypoints",
   runner: {
     disabled: false
-  },
-  hooks: {
-    build: {
-      async done() {
-        await copyFile("./node_modules/@vlcn.io/crsqlite-wasm/dist/crsqlite.wasm", "./.output/chrome-mv3/crsqlite.wasm");
-      }
-    }
   },
   manifest: {
     "host_permissions": [
@@ -37,6 +31,9 @@ export default defineConfig({
   vite: () => ({
     plugins: [
       react(),
+      tsconfigPaths({
+        root: "../..",
+      })
     ]
   })
 });
